@@ -10,7 +10,7 @@ body{
     list-style: none;
     gap: 20px;
     padding-inline-start: 0px;
-
+    
 }.mainNav li{
     font-size: 20px;
     text-decoration: none;
@@ -44,6 +44,37 @@ body{
     margin-right: 10px;
     width: 90px;
     height: 90px;
+}
+.burger-menu {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    gap: 5px;
+    margin-right: 10px;
+}
+
+.burger-menu span {
+    display: block;
+    height: 5px;
+    width: 100%;
+    background: #000000;
+    transition: 0.3s;
+    border-radius: 2px;
+    position: relative;
+}
+
+/* Анимация превращения в крестик */
+.burger-menu.open span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+.burger-menu.open span:nth-child(2) {
+    opacity: 0;
+}
+.burger-menu.open span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
 }
 @media (max-width: 768px) {
     body{

@@ -1,8 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const menuToggle = document.querySelector(".menu-toggle");
+    const burgerMenu = document.querySelector(".burger-menu");
     const mainNav = document.querySelector(".mainNav");
 
-    menuToggle.addEventListener("click", () => {
-        mainNav.classList.toggle("active");
-    });
+    if (burgerMenu && mainNav) {
+        burgerMenu.addEventListener("click", () => {
+            mainNav.classList.toggle("active");
+            burgerMenu.classList.toggle("open");
+        });
+    }
 });
