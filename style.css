@@ -62,7 +62,6 @@ body{
     width: 100%;
     background: #000000;
     transition: 0.3s;
-    border-radius: 2px;
     position: relative;
 }
 
